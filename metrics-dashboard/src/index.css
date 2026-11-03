@@ -207,18 +207,6 @@ a {
   font-weight:bold;
   overflow-wrap:anywhere
 }
-.metric-card-bottom {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
-  gap:8px;
-  margin-top:auto;
-  color:var(--muted);
-  font-size:11px
-}
-.metric-status {
-  color:#34d399
-}
 .metric-toolbar {
   position:absolute;
   top:0;

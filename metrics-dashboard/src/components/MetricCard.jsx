@@ -38,25 +38,25 @@ export default function MetricCard({ metric }) {
 
   if (loading) {
     return (
-      <article className="metric-card skeleton-card">
+      <div className="metric-card skeleton-card">
         <div className="skeleton skeleton-icon" />
         <div className="skeleton skeleton-title" />
         <div className="skeleton skeleton-value" />
         <div className="skeleton skeleton-footer" />
-      </article>
+      </div>
     );
   }
 
   if (error) {
     return (
-      <article className="metric-card error-card">
+      <div className="metric-card error-card">
         <div className="metric-icon">{metric.icon}</div>
         <h3>{metric.title}</h3>
         <p className="error-message">{error}</p>
         <button className="retry-button" onClick={loadData}>
           Try again
         </button>
-      </article>
+      </div>
     );
   }
   const isPositive = data.change >= 0;
@@ -81,10 +81,6 @@ export default function MetricCard({ metric }) {
         <p className="metric-description">
           {data.description}
         </p>
-      </div>
-      <div className="metric-card-bottom">
-        <span>Compared to last month</span>
-        <span className="metric-status">● Live</span>
       </div>
     </div>
   );
